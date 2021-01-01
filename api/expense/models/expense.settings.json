@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "expenses",
+  "info": {
+    "name": "Expense"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "description": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "daily",
+        "monthly"
+      ],
+      "default": "daily"
+    }
+  }
+}
