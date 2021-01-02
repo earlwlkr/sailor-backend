@@ -16,10 +16,6 @@
     "price": {
       "type": "decimal",
       "default": 0
-    },
-    "category": {
-      "model": "category",
-      "via": "product"
     }
   }
 }

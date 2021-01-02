@@ -2,11 +2,13 @@
   "kind": "collectionType",
   "collectionName": "categories",
   "info": {
-    "name": "Category"
+    "name": "Category",
+    "description": ""
   },
   "options": {
     "increments": true,
-    "timestamps": true
+    "timestamps": true,
+    "draftAndPublish": false
   },
   "attributes": {
     "name": {
@@ -14,10 +16,6 @@
     },
     "products": {
       "collection": "product"
-    },
-    "product": {
-      "via": "category",
-      "model": "product"
     }
   }
 }
