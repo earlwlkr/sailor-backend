@@ -30,9 +30,8 @@ module.exports = ({ env }) => ({
     default: {
       connector: 'bookshelf',
       settings: {
-        client: 'postgres',
-        schema: 'public',
-        ...getConfig(env),
+        client: 'sqlite',
+        filename: env('DATABASE_FILENAME', '.tmp/data.db'),
       },
       options: {
         useNullAsDefault: true,

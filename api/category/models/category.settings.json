@@ -1,9 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "products",
+  "collectionName": "categories",
   "info": {
-    "name": "product",
-    "description": ""
+    "name": "Category"
   },
   "options": {
     "increments": true,
@@ -14,13 +13,12 @@
     "name": {
       "type": "string"
     },
-    "price": {
-      "type": "decimal",
-      "default": 0
+    "products": {
+      "collection": "product"
     },
-    "category": {
-      "model": "category",
-      "via": "product"
+    "product": {
+      "via": "category",
+      "model": "product"
     }
   }
 }
