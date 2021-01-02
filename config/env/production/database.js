@@ -14,7 +14,7 @@ if (process.env.DATABASE_URL) {
   settings.database = parsed.pathname.substr(1);
   settings.username = username;
   settings.password = password;
-  settings.ssl = false;
+  settings.ssl = { rejectUnauthorized: false };
 }
 
 module.exports = ({ env }) => ({
